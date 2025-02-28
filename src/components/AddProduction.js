@@ -361,7 +361,7 @@ const validateKeterangan = () => {
                 <div className="field">
                     <label className="label">Total Jam</label>
                     <div className="control">
-                        <input type="number" className="input" value={totaljam} onChange={(e) => setTotaljam(e.target.value)} placeholder='Total Jam' required/>
+                        <input type="number" className="input" value={totaljam} onChange={(e) => setTotaljam(e.target.value)} placeholder='Total Jam' />
                     </div>
                 </div>
                 <div className="field">

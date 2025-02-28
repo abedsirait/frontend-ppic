@@ -61,15 +61,15 @@ const AddIntake = () => {
         <div className="column is-half">
             <form onSubmit={saveIntake}>
                 <div className="field">
-                    <label className="label">Kode Material</label>
-                    <div className="control">
-                        <input type="text" className="input" value={kodematerial} onChange={(e) => setCode(e.target.value)} placeholder='Kode Material' required/>
-                    </div>
-                </div>
-                <div className="field">
                     <label className="label">Nama Material</label>
                     <div className="control">
                         <input type="text" className="input " value={nama} onChange={(e) => setName(e.target.value)} placeholder='Nama Material' required />
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">Kode Material</label>
+                    <div className="control">
+                        <input type="text" className="input" value={kodematerial} onChange={(e) => setCode(e.target.value)} placeholder='Kode Material' required/>
                     </div>
                 </div>
                 <div className="field">
