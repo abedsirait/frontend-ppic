@@ -151,7 +151,6 @@ const resolveEditRequest = async (id) => {
                     <table className="table is-striped is-fullwidth">
                         <thead>
                             <tr>
-                                <th>No</th>
                                 <th>Intake ID</th>
                                 <th>Alasan</th>
                                 <th>Aksi</th>
@@ -160,7 +159,6 @@ const resolveEditRequest = async (id) => {
                         <tbody>
                             {editRequests.map((request, index) => (
                                 <tr key={request.id}>
-                                    <td>{index + 1}</td>
                                     <td>{request.intakeId}</td>
                                     <td>{request.reason}</td>
                                     <td>
