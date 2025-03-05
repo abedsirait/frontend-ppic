@@ -10,7 +10,7 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
-ENV REACT_APP_API_URL="https://test-backend-ppic-47429645215.us-central1.run.app/"
+ENV REACT_APP_API_URL="https://api-47429645215.asia-southeast2.run.app/"
 # Salin semua file ke dalam container
 COPY . .
 
