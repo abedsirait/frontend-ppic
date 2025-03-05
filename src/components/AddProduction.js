@@ -16,7 +16,6 @@ const AddProduction = () => {
     const [operator2, setOperator2] = useState('');
     const [operator3, setOperator3] = useState('');
     const [tanggal, setTanggal] = useState('');
-    const [shift, setShift] = useState('');
     const [tonase, setTonase] = useState('');
     const [totaljam, setTotaljam] = useState('');
     const [keterangan, setKeterangan] = useState('');
@@ -63,7 +62,6 @@ const AddProduction = () => {
             operator2,
             operator3,
             tanggal,
-            shift,
             tonase,
             totaljam,
             keterangan,
@@ -92,7 +90,7 @@ const AddProduction = () => {
     
 
     const addDetailsLabel = () => {
-        setDetails([...details, { detaillabel1: "", detaillabel2: "", detaillabel3: "", operator: "", jam: "", tonase_label1: "", tonase_label2: "", tonase_label3: "",karung1:"",  karung2:"", karung3:"" }]);
+        setDetails([...details, { detaillabel1: "", detaillabel2: "", detaillabel3: "", operator: "", jam: "", shift: "",tonase_label1: "", tonase_label2: "", tonase_label3: "",karung1:"",  karung2:"", karung3:"" }]);
     };
 
     const removeLabelGroup = (index) => {
@@ -138,7 +136,7 @@ const validateKeterangan = () => {
     setErrorKeterangan(""); // Reset error jika valid
   };
     
-    const isValid = kategori && mesin && jenisproduk && namaproduk && labelumum && supervisor && operator1 && operator2 && operator3 && tanggal && shift && tonase  && details.every(detail => detail.detaillabel1 && detail.detaillabel2 && detail.detaillabel3 && detail.operator && detail.jam );
+    const isValid = kategori && mesin && jenisproduk && namaproduk && labelumum && supervisor && operator1 && operator2 && operator3 && tanggal  && tonase  && details.every(detail => detail.detaillabel1 && detail.detaillabel2 && detail.detaillabel3 && detail.operator && detail.jam );
 
   return (
     <div>
@@ -304,6 +302,17 @@ const validateKeterangan = () => {
                                             <label className="label">Tonase</label>
                                             <input type="number" className="input"  value={detail.tonase_label3= detail.karung3 * tonaseMultipliers[namaproduk] || 0}readOnly required />
                                         </div>
+                                        <div className="column">
+                                        <label className="label">Shift</label>
+                                        <div className="select">
+                                        <select value={detail.shift} onChange={(e) => handleDetailChange(index, "shift", e.target.value)} required>
+                                <option>--Pilih Shift--</option>
+                                <option value="1">Shift 1</option>
+                                <option value="2">Shift 2</option>
+                                <option value="3">Shift 3</option>
+                            </select>
+                        </div>
+                </div>
                                     </div>
                                     <button type="button" className="button is-danger" onClick={() => removeLabelGroup(index)}>Hapus</button>
                                 </div>
@@ -340,17 +349,6 @@ const validateKeterangan = () => {
                     <div className="control">
                         <input type="date" className="input" value={tanggal} onChange={(e) => setTanggal(e.target.value)} required />
                     </div>
-                </div>
-                <div className="field">
-                    <label className="label">Shift</label>
-                        <div className="select">
-                            <select value={shift} onChange={(e) => setShift(e.target.value)} required>
-                                <option>--Pilih Shift--</option>
-                                <option value="1">Shift 1</option>
-                                <option value="2">Shift 2</option>
-                                <option value="3">Shift 3</option>
-                            </select>
-                        </div>
                 </div>
                 <div className="field">
                     <label className="label">Tonase</label>

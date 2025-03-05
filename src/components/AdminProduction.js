@@ -194,12 +194,10 @@ const resolveEditRequest = async (id) => {
                 <th>Production ID</th>
                 <th>Category</th>
                 <th>Machine</th>
-                <th>Product</th>
                 <th>Product Name</th>
                 <th>Label</th>
                 <th>Detail Label</th>
                 <th>Date</th>
-                <th>Shift</th>
                 <th>Supervisor</th>
                 <th>Operator</th>
                 <th>Total Jam</th>
@@ -214,12 +212,10 @@ const resolveEditRequest = async (id) => {
                 <td>{production.id}</td>
                 <td>{production.kategori}</td>
                 <td>{production.mesin}</td>
-                <td>{production.jenisproduk}</td>
                 <td>{production.namaproduk}</td>
                 <td>{production.labelumum}</td>
                 <td><Link to={`/admin/production/details/${production.id}`} type='button' className='button is-small is-info'>Details</Link></td>
                 <td>{formatDate(production.tanggal)}</td>
-                <td>{production.shift}</td>
                 <td>{production.supervisor}</td>
                 <td>{production.operator1}, {production.operator2}, {production.operator3}</td>
                 <td>{production.totaljam}</td>

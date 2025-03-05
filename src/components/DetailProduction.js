@@ -83,6 +83,7 @@ const DetailProduction = () => {
                             <th>Jmlh Karung label 1</th>
                             <th>tonase label 3</th>
                             <th>Operator</th>
+                            <th>Shift</th>
                             <th>Jam</th>
                         </tr>
                     </thead>
@@ -101,8 +102,8 @@ const DetailProduction = () => {
                                     <td>{detail.karung3}</td>
                                     <td>{detail.tonase_label3}</td>
                                     <td>{detail.operator}</td>
+                                    <td>{detail.shift}</td>
                                     <td>{detail.jam ? detail.jam.slice(0, 5) : '-'}</td>
-                                    <td>{detail.berat}</td>
                                 </tr>
                             ))
                         ) : (
